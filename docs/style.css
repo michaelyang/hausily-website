@@ -1,0 +1,141 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 1em 0;
+}
+
+.main-container {
+    padding: 1em;
+}
+
+.footer-container {
+    background-color: #f2f2f2;
+    min-height: 6em;
+    position: relative;
+}
+
+.footer-container p {
+    position: absolute;
+    right: 1em;
+    bottom: 0.1em;
+}
+
+.logo {
+  margin: auto;
+  padding: 1em 0;
+}
+
+.logo img {
+  display: block;
+}
+
+nav {
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 0 2em 0 0;
+  font-size: 1.8em;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #7d7c7d;
+}
+
+header ul li a:hover {
+    color: #b6b6b6;
+}
+
+header ul li a.active {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: 300;
+}
+
+.section-header {
+    font-size: 2em;
+}
+
+.section-content {
+    padding: 0 1em;
+}
+
+.team-grid {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 1em;
+  }
+  
+.team-member {
+    /* Demo-Specific Styles */
+    /*background: #eaeaea;*/
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: 30em;
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+  }
+
+  .team-member img {
+      height: 40%;
+  }
+
+  .title {
+    color: grey;
+    font-size: 1em;
+}
+
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+    .team-member {
+      margin: 0;
+    }
+
+@media (min-width: 600px) {
+    body {
+        max-width: 1200px;
+        margin:auto;
+    }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-left: 2em;
+  }
+
+  nav {
+    align-self: center;
+    margin: 0 0.8em 0 0;
+  }
+}
